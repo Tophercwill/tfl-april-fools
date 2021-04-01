@@ -33,7 +33,7 @@ async def on_message(message):
     global updatedList
     global nameDict
 
-    if message.author.bot or message.attachments:
+    if message.author.bot:
         return
 
     if not startBot and message.content == "$sudo start moderator.py":      #Startup
@@ -56,10 +56,21 @@ async def on_message(message):
         big_regex = re.compile('|'.join(map(re.escape, prohibitedWords)))
         new_message = big_regex.sub("[REDACTED]", text)
         await message.delete()
-        await message.channel.send(new_message)
+        if message.attachments:
+            print("test")
+            async with aiohttp.ClientSession() as session:
+                async with session.get(message.attachments[0].url) as resp:
+                    if resp.status != 200:
+                        return await message.channel.send('Could not download file...')
+                    data = io.BytesIO(await resp.read())
+                    await message.channel.send(new_message, file=discord.File(data, 'cool_image.png'))
+        else:
+            await message.channel.send(new_message)
         return
 
     if startBot and secondPhase:                        #Profiles swapped
+        if message.attachments:
+            return
         if message.content == "$shuffle":
             gifURL = random.sample(Swapping.randomGif, 1)
             await message.channel.send("PROFILES SHUFFLED. " + gifURL[0])
