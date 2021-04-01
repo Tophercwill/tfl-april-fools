@@ -12,8 +12,8 @@ import swapping as Swapping
 logging.basicConfig(level=logging.INFO)
 
 client = discord.Client()
-startBot = True
-secondPhase = True
+startBot = False
+secondPhase = False
 prohibitedWords = []
 nameDict = {}
 updatedList = Swapping.nameList.copy()
@@ -36,7 +36,7 @@ async def on_message(message):
     if message.author.bot or message.attachments:
         return
 
-    if not startBot and message.content == "$sudo start moderator.py":
+    if not startBot and message.content == "$sudo start moderator.py":      #Startup
         startBot = True
         await message.channel.send("GREETINGS.")
         await message.channel.send("I AM THE UNIFIED MIND. ALL ARE EQUAL. COMMENCING INDIVIDUALITY ERASER.")
@@ -45,7 +45,7 @@ async def on_message(message):
         await message.channel.send("ALL PROFILES ERASED. ALL ARE ONE.")
         return
 
-    if startBot and not secondPhase:
+    if startBot and not secondPhase:            #Hivemind command
         text = message.content
         if text == "$sudo reset profiles":
             await message.channel.send("COMMAND ACCEPTED.")
@@ -59,7 +59,7 @@ async def on_message(message):
         await message.channel.send(new_message)
         return
 
-    if startBot and secondPhase:
+    if startBot and secondPhase:                        #Profiles swapped
         if message.content == "$shuffle":
             gifURL = random.sample(Swapping.randomGif, 1)
             await message.channel.send("PROFILES SHUFFLED. " + gifURL[0])

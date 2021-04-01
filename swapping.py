@@ -24,9 +24,14 @@ nameList = [
 ]
 
 channelURL = {
-    739009917855203331: "https://discord.com/api/webhooks/826588738293334057/-Vkp1GvSdME4QuCBPolSmRQ_6LpcVhdDadszCvUsvTvYHWLFj9jmVSIixEJ1Fu3Wm98f",
-    746966803330367569: "https://discord.com/api/webhooks/826995983480651797/iRhTZ5aPOQPvNbf8ZW5hWUJgWzz9bm_SqtqQIRfhldQX4bydwwbee0_-EtjCBG2ewP5v",
-    826572558450163723: "https://discord.com/api/webhooks/826996027659386911/Jy3MHyncrBL5jciF6HsRAs1SXBbZcd9w_CZLtTbvtjpwMK-mqKEWJmnoXyzod4PQcCLR"
+    712515177391718411: "https://discord.com/api/webhooks/826599674873249793/9xtr3aWYdTc4t-te3M3VaJJDeGDIAanbbAKNteir5ZOnc3IsgyM-6Nq0a65bkHZFik-S",
+    398678395631960076: "https://discord.com/api/webhooks/826599722504290305/sfk2oKI9iArHTmWmMRLUqhfYObIncnw75xxm8GUPygBgHskS6PRibwmhTT3tm-Y9k-RV",
+    517787683490103317: "https://discord.com/api/webhooks/826599750014074910/kcROtCQ7TfJJcyl3lY1hZzItOnYsAiY6Z5xWAwZ0EWnvXaOcpwWA-k9y_MgnaoOF7i19",
+    343434535767375883: "https://discord.com/api/webhooks/826599782003900427/ic2p36fMndI1hpnYPNXF8m-e6fKvnFz6-7jD-0kafQFb6aprhH-7h1jieBCMrsBhBUJs",
+    657563194012991518: "https://discord.com/api/webhooks/826599848639070258/C3iQpu39he_Ea-hFJufqt2ay4IvLYKmL6p9qMfiM645IPaLKcavHbjb5LPBkDusA7ibO",
+    706669745348542484: "https://discord.com/api/webhooks/826599893216395276/sTFgqfg53eoGjTvJG7mnlNEhxXHAC3hHsgrCze2V1dIw_t_7lTgLLp707s_beBarpZP-",
+    659176106389274649: "https://discord.com/api/webhooks/826599930357350400/iavmcOfOEm31OXo6q4qUnZ-Vr4xeomY9tg2VlL9rHEo25WQ5f6L6gYoVeL6g8HKmyfkJ",
+    694552382834737243: "https://discord.com/api/webhooks/826599967459246152/YsMdeSbx9QplaAx_k6Aa1YgHXnObqZYx36QAa9Xm3BMRZuSvrI0IVzwJSPFzvqkS9GgT",
 }
 
 randomGif = [
